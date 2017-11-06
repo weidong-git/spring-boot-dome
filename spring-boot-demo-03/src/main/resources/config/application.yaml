@@ -1,0 +1,12 @@
+#这个优先级较高
+
+#自定义配置
+weidong:
+  secret: ${random.value}
+  number: ${random.int}
+  name: www.weidong.com
+  desc: the domain is ${weidong.name}
+
+#端口
+server: 
+  port: 9090
