@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOError;
+import java.io.IOException;
+import java.net.InetAddress;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -30,8 +33,10 @@ public class IndexController {
 
     @RequestMapping
     public String index() {
+        InetAddress inetAddress = null;
         logger.debug("this is a log test, debug");
         logger.info("this is a log test, info");
+        System.out.println(inetAddress);
         return "hello world";
     }
 
